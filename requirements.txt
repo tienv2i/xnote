@@ -1,0 +1,5 @@
+Django~=5.2
+django-filter~=25.1
+django-markdown~=0.8.4
+django-prose-editor~=0.10.4
+djangorestframework~=3.16.0
