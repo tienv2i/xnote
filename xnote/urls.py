@@ -23,10 +23,11 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('note/', include('note.urls', namespace='note')),
+    path('note/', include('note.urls')),
+    path('', include('home.urls')),
 ]
 
 if settings.DEBUG:
     urlpatterns += staticfiles_urlpatterns()
-    urlpatterns += static(settings.MEIDA_URL, document_root=settings.MEIDA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
